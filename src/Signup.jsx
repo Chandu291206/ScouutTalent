@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const Signup = () => {
   return (
     <>
-    <div className="min-h-screen bg-green-50 font-sans">
+    <div className="min-h-screen bg-[url(/IMG-20250711-WA0009.jpg)] bg-no-repeat bg-cover bg-center font-sans">
       {/* Top Navbar */}
       <div className="bg-[#13294B] p-4 flex items-center justify-start">
         <img src="/logo.png" alt="Logo" className="w-10 h-10" />
@@ -51,7 +51,7 @@ const Signup = () => {
 
       {/* Footer Statement */}
       <div className="text-center mt-16 px-4">
-        <h1 className="text-3xl font-bold leading-tight">
+        <h1 className="text-3xl text-white font-bold leading-tight">
           WE BELIEVE IN SPORTS <br />
           AND TEAMS BELIEVE IN US
         </h1>

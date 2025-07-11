@@ -31,18 +31,14 @@ function App() {
 
   return (
   <>
-      <div className="min-h-screen bg-[#F3FAF0]">
+      <div className="min-h-screen bg-[url(/IMG-20250711-WA0008.jpg)] bg-no-repeat bg-cover bg-center">
             <header className="bg-[#19325F] text-white p-6 flex flex-col items-center relative">
               <div className="absolute right-4 top-4 flex flex-row ">
                 <Link to="/login"><p className="mr-10">login</p></Link>
                 <Link to="/register"><p>Signup</p></Link>
               </div>
               <h1 className="text-3xl font-bold text-center">Discover the Next Football Superstar</h1>
-              <input
-                type="text"
-                placeholder="Search Players"
-                className="mt-4 w-full max-w-md px-4 py-2 rounded-full text-black"
-              />
+              
               
             </header>
       
@@ -52,7 +48,7 @@ function App() {
 
               </section>
       
-            <footer className="p-6 bg-[#F3FAF0] text-sm text-gray-700 flex justify-between items-center flex-wrap">
+            <footer className="absolute inset-x-0 bottom-0 p-6 bg-[#F3FAF0]  text-sm text-gray-700 flex justify-between items-center flex-wrap">
               <p>©2025 griet.aac.in • All rights reserved</p>
               <div className="flex gap-8">
                 <div>
