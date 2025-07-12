@@ -43,7 +43,7 @@ export default function PlayerList() {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen bg-[url(/IMG-20250711-WA0006.jpg)] bg-no-repeat bg-cover bg-center">
       {/* Sidebar */}
       <aside className="bg-[#0f2343] text-white w-56 p-6 space-y-6 rounded-r-3xl">
         <div className="flex flex-col space-y-6">
@@ -66,19 +66,26 @@ export default function PlayerList() {
         </div>
       </aside>
 
-      {/* Content */}
+      {/* Main Content */}
       <main className="flex-1 px-10 py-8">
         <h1 className="text-3xl font-bold mb-6">Players</h1>
         <div className="space-y-6">
           {players.map(player => (
-            <div key={player.id} className="flex justify-between items-center border-b pb-4">
+            <div
+              key={player.id}
+              className="flex justify-between items-center border-b border-gray-300 pb-4"
+            >
               <div className="flex items-center space-x-4">
-                <img src={player.image} alt={player.name} className="w-12 h-12 rounded-full object-cover" />
+                <img
+                  src={player.image}
+                  alt={player.name}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
                 <span className="text-lg">{player.name}</span>
               </div>
               <button
                 onClick={() => toggleMarket(player.id)}
-                className="bg-blue-300 text-black px-4 py-2 rounded-lg hover:bg-blue-400 transition"
+                className="bg-blue-300 text-black px-4 py-2 rounded-lg hover:bg-blue-400 transition-colors duration-300"
               >
                 {player.marketed ? 'Delete from market' : 'Add to market'}
               </button>
