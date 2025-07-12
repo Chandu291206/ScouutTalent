@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'; 
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const filters = ["Age", "Position", "Nationality", "Height", "More"];
 
@@ -12,6 +12,9 @@ const players = [
   { id: 6, src: "/players/ronaldo.png" }
 ];
 
+const hexagonClip = {
+  clipPath: 'polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)'
+};
 
 const Scoutmar = () => {
   return (
@@ -38,7 +41,7 @@ const Scoutmar = () => {
           placeholder="Search players..."
           className="px-4 py-2 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300 w-60"
         />
-         {filters.map((filter) => (
+        {filters.map((filter) => (
           <button
             key={filter}
             className="bg-blue-200 text-black px-4 py-2 rounded-md shadow-sm text-sm"
@@ -51,43 +54,42 @@ const Scoutmar = () => {
       {/* Main Content */}
       <div className="mt-10 flex flex-col md:flex-row justify-between items-start gap-10">
         {/* Hexagon Grid */}
-        <div className="flex flex-wrap gap-2 max-w-[420px] ml-10">
-          {players.map((player, index) => (
+        <div className="flex flex-wrap gap-4 max-w-[420px] ml-10 justify-center">
+          {players.map((player) => (
             <div
               key={player.id}
-              className="w-[100px] h-[90px] bg-black clip-hexagon overflow-hidden"
+              className="w-[100px] aspect-[1.1547] bg-black overflow-hidden flex items-center justify-center transition-transform duration-300 hover:scale-105"
+              style={hexagonClip}
             >
               <img
                 src={player.src}
                 alt="player"
-                className="object-cover w-full h-full"
+                className="w-full h-full object-cover"
               />
             </div>
           ))}
         </div>
-         {/* Player Card */}
-         <Link to="/PlayerInfo">
-        <div className="bg-blue-100 rounded-xl p-6 shadow-lg w-[250px] text-center">
-          <img
-            src="/players/ronaldo.png"
-            alt="Ronaldo"
-            className="rounded-md h-40 w-full object-cover mb-4"
-          />
-          <div className="text-lg font-bold">RONALDO</div>
-          <div className="flex justify-between mt-1 text-sm font-semibold">
-            <span>40</span>
-            <span>Striker</span>
+
+        {/* Player Card */}
+        <Link to="/PlayerInfo">
+          <div className="bg-blue-100 rounded-xl p-6 shadow-lg w-[250px] text-center">
+            <img
+              src="/players/ronaldo.png"
+              alt="Ronaldo"
+              className="rounded-md h-40 w-full object-cover mb-4"
+            />
+            <div className="text-lg font-bold">RONALDO</div>
+            <div className="flex justify-between mt-1 text-sm font-semibold">
+              <span>40</span>
+              <span>Striker</span>
+            </div>
+            <hr className="my-2" />
+            <div className="text-sm">Al Nasser</div>
           </div>
-          <hr className="my-2" />
-          <div className="text-sm">Al nasser</div>
-        </div>
         </Link>
-        
       </div>
     </div>
+  );
+};
 
-
-  )
-}
-
-export default Scoutmar
+export default Scoutmar;
