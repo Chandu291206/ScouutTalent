@@ -1,12 +1,21 @@
 import React from 'react'
 
-const UploadCard = ({ title, subtitle, icon }) => {
+const UploadCard = ({ url, title, age, subtitle, team }) => {
   return (
-      <div className="bg-white w-52 h-44 rounded-xl shadow-md flex flex-col items-center justify-center gap-2 text-center">
-      <div className="text-4xl">{icon}</div>
-      <p className="text-lg font-medium">{title}</p>
-      <p className="text-sm text-gray-600">{subtitle}</p>
-    </div>
+      <div className="bg-blue-100 rounded-xl p-6 shadow-lg w-[250px] text-center">
+            <img
+              src={url}
+              alt="Player"
+              className="rounded-md h-40 w-full object-cover mb-4"
+            />
+            <div className="text-lg font-bold">{title}</div>
+            <div className="flex justify-between mt-1 text-sm font-semibold">
+              <span>{age}</span>
+              <span>{subtitle}</span>
+            </div>
+            <hr className="my-2" />
+            <div className="text-sm">{team}</div>
+          </div>
   )
 }
 

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import {Link} from 'react-router-dom'
+import UploadCard from './UploadCard';
 
 const players = [
   {
@@ -43,9 +44,18 @@ function App() {
             </header>
       
             <section className="p-6">
-              <h2 className="text-xl font-bold mb-4">Featured Players</h2>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Lionel_Messi_Argentina_celebrating_World_Cup.jpg" alt="External" />
-
+              <h2 className="text-white text-xl font-bold mb-4 ">Featured Players</h2>
+              <div className='flex items-center flex-row ustify-between  gap-10 ml-75'>
+              <UploadCard url="https://upload.wikimedia.org/wikipedia/commons/e/e0/Jude_Bellingham_2023.jpg"
+                          title="Bellinghum" age="21" subtitle="Midfielder" team="Real Madrid"
+              />
+              <UploadCard url="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg"
+                          title="Ronaldo" age="40" subtitle="Striker" team="Al Nasser"
+              />
+              <UploadCard url="https://upload.wikimedia.org/wikipedia/commons/b/b8/Lionel_Messi_Argentina_celebrating_World_Cup.jpg"
+                          title="Lionel Messi" age="37" subtitle="Right Wing" team="Inter Miami"
+              />
+              </div>
               </section>
       
             <footer className="absolute inset-x-0 bottom-0 p-6 bg-[#F3FAF0]  text-sm text-gray-700 flex justify-between items-center flex-wrap">
