@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 const filters = ["Age", "Position", "Nationality", "Height", "More"];
 
 const players = [
-  { id: 1, src: "/players/messi.png" },
-  { id: 2, src: "/players/mbappe.png" },
-  { id: 3, src: "/players/haaland.png" },
-  { id: 4, src: "/players/kdb.png" },
-  { id: 5, src: "/players/grealish.png" },
-  { id: 6, src: "/players/ronaldo.png" }
+  { id: 1, src: "https://res.cloudinary.com/dhuado5jg/image/upload/v1752591401/download_wjlepz.jpg" },
+  { id: 2, src: "https://res.cloudinary.com/dhuado5jg/image/upload/v1752591481/download_t9jdvd.jpg" },
+  { id: 3, src: "https://res.cloudinary.com/dhuado5jg/image/upload/v1752591513/download_i3r7tj.jpg" },
+  { id: 4, src: "https://res.cloudinary.com/dhuado5jg/image/upload/v1752591661/download_dj36ge.jpg" },
+  { id: 5, src: "https://res.cloudinary.com/dhuado5jg/image/upload/v1752592128/download_hxpd9w.jpg" },
+  { id: 6, src: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg" }
 ];
 
 const hexagonClip = {
@@ -74,7 +74,7 @@ const Scoutmar = () => {
         <Link to="/PlayerInfo">
           <div className="bg-blue-100 rounded-xl p-6 shadow-lg w-[250px] text-center">
             <img
-              src="/players/ronaldo.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg"
               alt="Ronaldo"
               className="rounded-md h-40 w-full object-cover mb-4"
             />

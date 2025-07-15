@@ -5,14 +5,21 @@ const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true)
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f2fbf1] bg-[url(/IMG-20250711-WA0007.jpg)] bg-no-repeat bg-cover bg-center">
+    <div className="min-h-screen flex items-center justify-center  bg-[url(/IMG-20250711-WA0007.jpg)] bg-no-repeat bg-cover bg-center">
+      <header className="bg-[#19325F] text-white  items-center ">
+              <Link to="/">
+              <div className='absolute left-4 top-4 flex flex-row'>
+              <img src="" alt="logo" />
+              <p>ScoutTalent</p>
+              </div></Link>
+            </header>
       <div className="relative w-[320px] h-[380px]  rounded-lg overflow-hidden shadow-lg bg-white">
         
         {/* Forms Container */}
         <div className="relative w-full h-full">
           {/* Login Form */}
           <div
-            className={`absolute inset-0 px-6 pt-12 pb-8 transition-all duration-500 ease-in-out ${
+            className={`absolute inset-0  pt-12 pb-8 transition-all duration-500 ease-in-out ${
               isLogin
                 ? 'translate-y-0 opacity-100 z-20'
                 : '-translate-y-full opacity-0 z-10'
@@ -21,7 +28,7 @@ const AuthForm = () => {
               <h2 className="text-green-700 text-center text-xl font-semibold mb-8  ">
                 Login</h2>
 
-            <form className="space-y-5">
+            <form className="space-y-5 px-6">
               <input
                 type="email"
                 placeholder="Email"
@@ -52,7 +59,7 @@ const AuthForm = () => {
 
           {/* Sign Up Form */}
           <div
-            className={`absolute inset-0 px-6 pt-6 pb-8 bg-[#335C85] transition-all duration-500 ease-in-out ${
+            className={`absolute inset-0  pt-6 pb-8 bg-[#335C85] transition-all duration-500 ease-in-out ${
               isLogin
                 ? 'translate-y-full opacity-0 z-10'
                 : 'translate-y-0 opacity-100 z-20'
@@ -68,7 +75,7 @@ const AuthForm = () => {
             </h2>
             </div></div><br />
             <h2 className="text-white text-2xl font-semibold text-center  mb-5">Sign Up</h2>
-            <form className="space-y-2.5">
+            <form className="space-y-2.5 px-6">
               <input
                 type="text"
                 placeholder="Username"
@@ -93,7 +100,7 @@ const AuthForm = () => {
             <Link to="/signup">
             <button
                 type="submit"
-                className="w-full bg-[#253B45] text-white font-bold py-2"
+                className="w-70 bg-[#253B45] text-white font-bold text-center ml-5 py-2"
               >
                 Sign Up
               </button>

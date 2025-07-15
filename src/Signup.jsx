@@ -5,9 +5,11 @@ const Signup = () => {
   return (
     <div className="min-h-screen bg-[url(/IMG-20250711-WA0009.jpg)] bg-no-repeat bg-cover bg-center font-sans text-white">
       {/* Top Navbar */}
-      <div className="bg-[#1a2b44] flex items-center px-6 py-4">
+      <Link to="/">
+      <div className="bg-[#1a2b44] flex flex-row items-center px-6 py-4">
         <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-full" />
-      </div>
+        <p>ScoutTalent</p>
+      </div></Link>
 
       {/* Headings */}
       <div className="text-center mt-12 px-4">

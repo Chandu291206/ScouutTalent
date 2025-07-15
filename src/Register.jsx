@@ -6,6 +6,13 @@ const AuthForm = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[url(/IMG-20250711-WA0004.jpg)] bg-no-repeat bg-cover bg-center">
+      <header className="bg-[#19325F] text-white  items-center ">
+              <Link to="/">
+              <div className='absolute left-4 top-4 flex flex-row'>
+              <img src="" alt="logo" />
+              <p>ScoutTalent</p>
+              </div></Link>
+            </header>
       <div className="relative w-[320px] h-[380px]  rounded-lg overflow-hidden shadow-lg bg-white">
         
         {/* Forms Container */}

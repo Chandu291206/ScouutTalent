@@ -5,30 +5,31 @@ import {
   Handshake,
   Mail
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const initialPlayers = [
   {
     id: 1,
     name: 'Kylian Mbappe',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Kylian_Mbapp%C3%A9_2019.jpg',
+    image: 'https://res.cloudinary.com/dhuado5jg/image/upload/v1752591481/download_t9jdvd.jpg',
     marketed: false
   },
   {
     id: 2,
     name: 'Erling Halland',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/7/75/Erling_Haaland_%28cropped%29.jpg',
+    image: 'https://res.cloudinary.com/dhuado5jg/image/upload/v1752591513/download_i3r7tj.jpg',
     marketed: false
   },
   {
     id: 3,
     name: 'Julian Alvarez',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Julian_Alvarez_2022.jpg',
+    image: 'https://res.cloudinary.com/dhuado5jg/image/upload/v1752591590/download_wrmuua.jpg',
     marketed: true
   },
   {
     id: 4,
     name: 'Kevin de bruyne',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Kevin_De_Bruyne_2021.jpg',
+    image: 'https://res.cloudinary.com/dhuado5jg/image/upload/v1752602465/download_rrnqrp.jpg',
     marketed: true
   }
 ];
@@ -44,11 +45,18 @@ export default function PlayerList() {
 
   return (
     <div className="flex min-h-screen bg-[url(/IMG-20250711-WA0006.jpg)] bg-no-repeat bg-cover bg-center">
+      <header className="bg-[#19325F] text-white  items-center ">
+                    <Link to="/">
+                    <div className='absolute left-4 top-4 flex flex-row'>
+                    <img src="" alt="logo" />
+                    <p>ScoutTalent</p>
+                    </div></Link>
+                  </header>
       {/* Sidebar */}
-      <aside className="bg-[#0f2343] text-white w-56 p-6 space-y-6 rounded-r-3xl">
-        <div className="flex flex-col space-y-6">
+      <aside className="bg-[#0f2343] text-white w-56 mt-16 p-8 space-y-6 rounded-r-3xl">
+        <div className="flex flex-col space-y-8">
           <div className="flex items-center space-x-3">
-            <Home />
+            <Home/>
             <span>Dashboard</span>
           </div>
           <div className="flex items-center space-x-3">
@@ -68,7 +76,7 @@ export default function PlayerList() {
 
       {/* Main Content */}
       <main className="flex-1 px-10 py-8">
-        <h1 className="text-3xl font-bold mb-6">Players</h1>
+        <h1 className="text-3xl font-bold mt-8 mb-6">Players</h1>
         <div className="space-y-6">
           {players.map(player => (
             <div

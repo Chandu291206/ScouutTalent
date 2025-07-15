@@ -9,7 +9,7 @@ const PlayerInfo = () => {
       {/* Left: Player Image */}
       <div className="w-1/2">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/5/58/Jude_Bellingham_2023.jpg"
+          src="https://res.cloudinary.com/dhuado5jg/image/upload/v1752604188/download_ej4vie.jpg"
           alt="Jude Bellingham"
           className="w-full h-full object-cover"
         />
@@ -48,11 +48,35 @@ const PlayerInfo = () => {
           </div>
 
           {/* Player Description */}
-          <p className="mt-6 text-xl text-gray-800 leading-relaxed">
-            The 21-year-old winger, valued at €120 million, reaches a top speed
-            of 34.8 km/h and averages 82 minutes per game. He plays a key role on
-            the midfield.
-          </p>
+         <div>
+            {tab === 'Info' && (
+    <p>
+      The 21-year-old winger, valued at €120 million, reaches a top speed
+      of 34.8 km/h and averages 82 minutes per game. He plays a key role on
+      the midfield.
+    </p>
+  )}
+
+  {tab === 'Stats' && (
+    <ul className="list-disc pl-6 space-y-2">
+      <li>Goals: 17</li>
+      <li>Assists: 9</li>
+      <li>Pass Accuracy: 89%</li>
+      <li>Dribbles per game: 3.4</li>
+      <li>Shots on target: 67%</li>
+    </ul>
+  )}
+
+  {tab === 'Health' && (
+    <ul className="list-disc pl-6 space-y-2">
+      <li>Injury Status: Fit</li>
+      <li>Last Injury: Hamstring (Feb 2025)</li>
+      <li>Medical Clearance: Passed - June 2025</li>
+      <li>Recovery Rate: Excellent</li>
+      <li>Resting Heart Rate: 58 bpm</li>
+    </ul>
+  )}
+         </div>
         </div>
 
         {/* Contact Agent */}
