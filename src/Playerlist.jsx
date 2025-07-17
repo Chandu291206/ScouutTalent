@@ -44,8 +44,8 @@ export default function PlayerList() {
   };
 
   return (
-    <div className="flex min-h-screen bg-[url(/IMG-20250711-WA0006.jpg)] bg-no-repeat bg-cover bg-center">
-      <header className="bg-[#19325F] text-white  items-center ">
+    <div className="flex min-h-screen bg-white bg-no-repeat bg-cover bg-center">
+      <header className="bg-black text-white  items-center ">
                     <Link to="/">
                     <div className='absolute left-4 top-4 flex flex-row'>
                     <img src="" alt="logo" />

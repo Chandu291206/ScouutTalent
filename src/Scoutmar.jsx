@@ -20,18 +20,19 @@ const Scoutmar = () => {
   return (
     <div className="bg-green-50 min-h-screen p-6 font-sans">
       {/* Navbar */}
-      <nav className="bg-[#13294B] text-white p-3 flex items-center justify-between rounded-xl px-6">
-        <div className="text-2xl font-bold">⚽</div>
-        <ul className="flex gap-8 text-lg">
+      <nav className="bg-[#13294B] text-white p-3 flex items-right justify-between rounded-xl px-6">
+        <Link to="/">
+              <div className="bg-[#1a2b44] flex flex-row items-center px-3 py-1">
+                <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-full" />
+                <p>ScoutTalent</p>
+              </div></Link>
+        <ul className="flex gap-8 text-lg py-2">
           <li>Home</li>
           <li>Players</li>
           <li>Scouts</li>
           <li>Reports</li>
         </ul>
-        <div className="flex gap-4 items-center">
-          <span>🔍</span>
-          <span>👤</span>
-        </div>
+        
       </nav>
 
       {/* Filters and Search */}
@@ -39,7 +40,7 @@ const Scoutmar = () => {
         <input
           type="text"
           placeholder="Search players..."
-          className="px-4 py-2 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300 w-60"
+          className="ml-20 px-4 py-2 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300 w-120"
         />
         {filters.map((filter) => (
           <button
