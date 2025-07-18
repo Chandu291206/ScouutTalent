@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import backgroundImg from '/public/Ball.png' // Adjust the path if needed
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true)
@@ -22,17 +21,17 @@ const AuthForm = () => {
         {/* Left Image Section */}
         <div className="w-1/2 hidden md:block">
           <img
-            src={backgroundImg}
+            src="https://res.cloudinary.com/dhuado5jg/image/upload/v1752855957/qdLo3nNq86HylBNDLeaAZr4foECCy3v82UAezivc23U_zsr1lv.webp"
             alt="Visual"
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Right Form Section */}
-        <div className="w-full md:w-1/2 flex items-center justify-center py-10 px-4 relative">
+        <div className="bg-[#E0F2FF] w-full md:w-1/2 flex items-center justify-center py-10 relative">
           <div className="relative w-[320px] h-[400px]">
             {/* Forms Container */}
-            <div className="relative w-full h-full">
+            <div className="bg-white relative w-full h-full">
               
               {/* Login Form */}
               <div
@@ -61,7 +60,7 @@ const AuthForm = () => {
                   </button>
                 </form>
 
-                <div className="bg-[#335C85] rounded-t-full mt-6 py-2 text-white text-center cursor-pointer " onClick={() => setIsLogin(false)}>
+                <div className="bg-[#335C85] rounded-t-full mt-23 py-2 text-white text-center cursor-pointer " onClick={() => setIsLogin(false)}>
                   <h2 className="text-xl font-semibold">Signup</h2>
                 </div>
               </div>
