@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home, FileText, MessageSquare, Settings, User } from 'lucide-react';
+import { Home, FileText, MessageSquare, Settings, User, Link } from 'lucide-react';
 
 const navItems = [
   { label: 'Dashboard', icon: <Home size={20} /> },
@@ -30,6 +30,11 @@ const Sidebar = () => {
               <User size={20} />
               <span>Profile</span>
             </div>
+            <Link to="/ContactUs">
+            <div className="flex items-center gap-3 cursor-pointer hover:text-blue-300">
+              <Settings size={20} />
+              <span>Contact Us</span>
+            </div></Link>
           </div>
         </aside>
   )

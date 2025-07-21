@@ -13,6 +13,7 @@ import PlayerList from './Playerlist.jsx'
 import Login from './Login.jsx'
 import PlayerInfo from './PlayerInfo.jsx'
 import Register from './Register.jsx'
+import ContactUs from './ContactUs.jsx'
 
 const router=createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router=createBrowserRouter([
   {
     path:"/PlayerInfo",
     element:<PlayerInfo/>
+  },
+  {
+    path:"/ContactUs",
+    element:<ContactUs/>
   },
 ])
 

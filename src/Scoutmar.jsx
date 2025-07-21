@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const filters = ["Age", "Position", "Nationality", "Height", "More"];
+const filters = [
+  { label: "Age", options: ["18-25", "26-30", "31-40"] },
+  { label: "Position", options: ["Striker", "Midfielder", "Defender", "Goalkeeper"] },
+  { label: "Nationality", options: ["Portugal", "Brazil", "France", "Argentina"] },
+  { label: "Height", options: ["< 5'8", "5'9 - 6'0", "> 6'1"] },
+  { label: "More", options: ["Captain", "Top Scorer", "New"] }
+];
 
 const players = [
   { id: 1, src: "https://res.cloudinary.com/dhuado5jg/image/upload/v1752591401/download_wjlepz.jpg" },
@@ -20,35 +26,38 @@ const Scoutmar = () => {
   return (
     <div className="bg-green-50 min-h-screen p-6 font-sans">
       {/* Navbar */}
-      <nav className="bg-[#13294B] text-white p-3 flex items-right justify-between rounded-xl px-6">
+      <nav className="bg-[#13294B] text-white p-3 flex items-center justify-between rounded-xl px-6">
         <Link to="/">
-              <div className="bg-[#1a2b44] flex flex-row items-center px-3 py-1">
-                <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-full" />
-                <p>ScoutTalent</p>
-              </div></Link>
+          <div className="bg-[#1a2b44] flex items-center px-3 py-1">
+            <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-full" />
+            <p className="ml-2 font-semibold">ScoutTalent</p>
+          </div>
+        </Link>
         <ul className="flex gap-8 text-lg py-2">
           <li>Home</li>
-          <li>Players</li>
+          <li className="font-bold underline">Players</li>
           <li>Scouts</li>
           <li>Reports</li>
         </ul>
-        
       </nav>
 
       {/* Filters and Search */}
-      <div className="flex flex-wrap gap-4 mt-6 items-center">
+      <div className="flex flex-wrap gap-4 mt-6 items-center justify-center">
         <input
           type="text"
           placeholder="Search players..."
-          className="ml-20 px-4 py-2 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300 w-120"
+          className="px-4 py-2 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300 w-72"
         />
-        {filters.map((filter) => (
-          <button
-            key={filter}
-            className="bg-blue-200 text-black px-4 py-2 rounded-md shadow-sm text-sm"
+        {filters.map((filter, idx) => (
+          <select
+            key={idx}
+            className="bg-blue-100 text-black px-4 py-2 rounded-md shadow-sm text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"
           >
-            {filter} ⌄
-          </button>
+            <option value="">{filter.label}</option>
+            {filter.options.map((option, i) => (
+              <option key={i} value={option}>{option}</option>
+            ))}
+          </select>
         ))}
       </div>
 
@@ -73,13 +82,13 @@ const Scoutmar = () => {
 
         {/* Player Card */}
         <Link to="/PlayerInfo">
-          <div className="bg-blue-100 rounded-xl p-6 shadow-lg w-[250px] text-center">
+          <div className="bg-white border border-gray-200 rounded-2xl shadow-lg w-[350px] p-6 text-center hover:shadow-xl transition-all">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg"
-              alt="Ronaldo"
-              className="rounded-md h-40 w-full object-cover mb-4"
+              alt="Cristiano Ronaldo"
+              className="rounded-xl h-64 w-full object-cover mb-4"
             />
-            <div className="text-lg font-bold">RONALDO</div>
+             <div className="text-lg font-bold">RONALDO</div>
             <div className="flex justify-between mt-1 text-sm font-semibold">
               <span>40</span>
               <span>Striker</span>

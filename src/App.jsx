@@ -50,6 +50,7 @@ function App() {
       <div className="min-h-screen  bg-cover bg-center">
         <header className=" bg-[#19325F] text-white p-6 flex flex-col items-center relative shadow-md">
           <div className="absolute right-6 top-4 flex gap-6 text-sm">
+            <Link to="/ContactUs" className="hover:underline">Contact Us</Link>
             <Link to="/login" className="hover:underline">Login</Link>
             <Link to="/register" className="hover:underline">Signup</Link>
           </div>
