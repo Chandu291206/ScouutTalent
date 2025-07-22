@@ -7,7 +7,7 @@ const Signup = () => {
       {/* Top Navbar */}
       <Link to="/">
       <div className="bg-[#1a2b44] flex flex-row items-center px-6 py-4">
-        <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-full" />
+        <img src="https://res.cloudinary.com/dhuado5jg/image/upload/v1753204336/WhatsApp_Image_2025-07-22_at_22.41.44_f1d2277a-removebg-preview_crjayb.png" alt="Logo" className=" h-10 rounded-full" />
         <p>ScoutTalent</p>
       </div></Link>
 

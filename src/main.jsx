@@ -12,8 +12,8 @@ import Signup from './Signup.jsx'
 import PlayerList from './Playerlist.jsx'
 import Login from './Login.jsx'
 import PlayerInfo from './PlayerInfo.jsx'
-import Register from './Register.jsx'
 import ContactUs from './ContactUs.jsx'
+import About from './About.jsx'
 
 const router=createBrowserRouter([
   {
@@ -25,8 +25,8 @@ const router=createBrowserRouter([
     element: <Login/>
   },
   {
-    path:"/register",
-    element:<Register/>
+    path:"/About",
+    element:<About/>
   },
   {
     path: '/signup',

@@ -29,7 +29,7 @@ const Scoutmar = () => {
       <nav className="bg-[#13294B] text-white p-3 flex items-center justify-between rounded-xl px-6">
         <Link to="/">
           <div className="bg-[#1a2b44] flex items-center px-3 py-1">
-            <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-full" />
+            <img src="https://res.cloudinary.com/dhuado5jg/image/upload/v1753204336/WhatsApp_Image_2025-07-22_at_22.41.44_f1d2277a-removebg-preview_crjayb.png" alt="Logo" className="w-10 h-10 rounded-full" />
             <p className="ml-2 font-semibold">ScoutTalent</p>
           </div>
         </Link>

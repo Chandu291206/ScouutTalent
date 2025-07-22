@@ -50,13 +50,12 @@ function App() {
       <div className="min-h-screen  bg-cover bg-center">
         <header className=" bg-[#19325F] text-white p-6 flex flex-col items-center relative shadow-md">
           <div className="absolute right-6 top-4 flex gap-6 text-sm">
-            <Link to="/ContactUs" className="hover:underline">Contact Us</Link>
+            <Link to="/About" className="hover:underline">About Us</Link>
             <Link to="/login" className="hover:underline">Login</Link>
-            <Link to="/register" className="hover:underline">Signup</Link>
           </div>
           <Link to="/">
             <div className="absolute left-6 top-4 flex items-center gap-2">
-              <img src="/logo192.png" alt="ScoutTalent logo" className="h-8" />
+              <img src="https://res.cloudinary.com/dhuado5jg/image/upload/v1753204336/WhatsApp_Image_2025-07-22_at_22.41.44_f1d2277a-removebg-preview_crjayb.png" alt="ScoutTalent logo" className="h-12" />
               <p className="font-bold text-lg">ScoutTalent</p>
             </div>
           </Link>
@@ -65,10 +64,44 @@ function App() {
 
         <main className="flex flex-col  bg-white/80 backdrop-blur-sm">
           {/* About Section */}
-          <div className="p-6 flex justify-center">
-            <div className='bg-white/90 rounded-lg shadow-md p-6 max-w-3xl w-full '>
-            <About />
-          </div></div>
+          <div className='flex flex-row mt-5'>
+       <div className=' w-[50vh] ml-[5%] rounded-lg border border-gray-300 p-2.5 bg-sky-300 flex flex-col shadow-md '>
+        <img src="C:\Users\varsh\OneDrive\Pictures\Screenshots\Screenshot 2025-07-04 165449.png" className='image1 w-25%' alt="" />
+          <h1 className='pt-5 text-center font-bold font-[Buenard]'>Agent</h1>
+          <p className='text-[20px] text-center text-[#323f4b] font-[Josefin_Sans]'>Manage transfer details of your Players</p>
+          <p className='text2  ' id='text-left pl-[3%] text-[#7b8794] font-[Josefin_Sans]'  >Negotiate contracts with clubs, ensure contract conditions,handle bonuses
+            provide career,planning,marketing and promotional apperances of your players...
+          </p>
+         <button className='w-44 h-10 font-bold mt-5 mx-auto text-white bg-blue-600 rounded-lg border-0' >set up as agent</button>
+         <a href="#" className='block text-center my-5 no-underline'>Know more  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+</svg></a>
+      </div>      
+      <div className=' w-[50vh] ml-[5%] rounded-lg border border-gray-300 p-2.5 bg-sky-300 flex flex-col shadow-md '>
+        <img src="C:\Users\varsh\OneDrive\Pictures\Screenshots\Screenshot 2025-07-04 165449.png" className='image1 w-25%' alt="" />
+          <h1 className='pt-5 text-center font-bold font-[Buenard]'>Scout</h1>
+          <p className='text-[20px] text-center text-[#323f4b] font-[Josefin_Sans]'>Find better players for your team </p>
+          <p className='text2  ' id='text-left pl-[3%] text-[#7b8794] font-[Josefin_Sans]'  >Evaluate talented players for clubs,academics or national teams.Acess a player's technical skills,physical awareness
+            ,and overall potential.Find young talents and recuit for specific roles...
+          </p>
+         <button className='w-44 h-10 font-bold mt-5 mx-auto text-white bg-blue-600 rounded-lg border-0' >set up as scout</button>
+         <a href="#" className='block text-center my-5 no-underline '>Know more  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+</svg></a>
+        </div>
+      <div className='  w-[50vh] ml-[5%] rounded-lg border border-gray-300 p-2.5 bg-sky-300 flex flex-col shadow-md '>
+        <img src="C:\Users\varsh\OneDrive\Pictures\Screenshots\Screenshot 2025-07-04 165449.png" className='image1 w-25%' alt="" />
+          <h1 className='pt-5 text-center font-bold font-[Buenard] '>Player</h1>
+          <p className='text-[20px] text-center text-[#323f4b] font-[Josefin_Sans]'>Find your chance and prove yourself</p>
+          <p className='text2  ' id='text-left pl-[3%] text-[#7b8794] font-[Josefin_Sans]'  >Be the one to represent your club or country with the goal of winning games and championships .
+            Also engage in media duties ,fan interactions,and community interactions ,while managing personal brand and proffesional image...
+          </p>
+          <button className='w-44 h-10 font-bold mt-5 mx-auto text-white bg-blue-600 rounded-lg border-0 ' >set up as player</button>
+         <a href="#" className='block text-center my-5 no-underline '>Know more  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short icon" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+</svg></a>
+        </div>
+      </div>
 
           {/* Player Cards Slider Section */}
           <div className="p-6  bg-[#f0f4f8]">

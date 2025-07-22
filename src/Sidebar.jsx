@@ -30,11 +30,6 @@ const Sidebar = () => {
               <User size={20} />
               <span>Profile</span>
             </div>
-            <Link to="/ContactUs">
-            <div className="flex items-center gap-3 cursor-pointer hover:text-blue-300">
-              <Settings size={20} />
-              <span>Contact Us</span>
-            </div></Link>
           </div>
         </aside>
   )

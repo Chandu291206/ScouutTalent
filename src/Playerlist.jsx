@@ -46,7 +46,7 @@ export default function PlayerList() {
       <aside className="bg-[#0f2343] text-white w-64 py-10 px-6 flex flex-col justify-between">
         <div>
           <Link to="/" className="flex items-center gap-2 mb-10">
-            <div className="w-8 h-8 bg-white rounded-full"></div>
+        <img src="https://res.cloudinary.com/dhuado5jg/image/upload/v1753204336/WhatsApp_Image_2025-07-22_at_22.41.44_f1d2277a-removebg-preview_crjayb.png" alt="Logo" className=" h-10 rounded-full" />
             <p className="text-xl font-bold">ScoutTalent</p>
           </Link>
 
